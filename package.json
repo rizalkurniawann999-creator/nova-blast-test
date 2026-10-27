@@ -1,12 +1,20 @@
+
 {
   "name": "nova-blast",
   "version": "1.0.0",
   "private": true,
   "description": "NOVA BLAST full-stack testing scaffold: Express API and existing frontend preview",
   "main": "src/server.js",
-  "scripts": {"start": "node src/server.js", "dev": "node --watch src/server.js", "check": "node --check src/server.js && node --check src/routes/api.js"},
-  "engines": {"node": ">=20"},
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "check": "node --check src/server.js && node --check src/routes/api.js && node --check src/whatsapp/client.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
+    "@whiskeysockets/baileys": "6.7.24",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
